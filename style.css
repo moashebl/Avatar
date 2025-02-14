@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+*{
+    font-family: 'Ubuntu',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+body{
+    background-image: linear-gradient(to right, #010120,#050420);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-image: linear-gradient(to right , #01022de5 30%,#000000cb) , url(avatar.jpg);
+    background-position: center;
+    width: 90%;
+    height: 640px;
+
+}
+.container:hover{
+    background-image: linear-gradient(to right , #01022de5 30%, transparent ) , url(avatar.jpg);
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+ul{
+  width: 60%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+ul a{
+    border-bottom: 2px solid  transparent ;
+}
+ul a:hover{
+    border-bottom-color: white;
+}
+.content{
+    color: aliceblue;
+    width: 50%;
+    margin-top: 50px;
+    padding: 30px;
+}
+.content h2{
+    font-size: 100px;
+    text-transform: uppercase;    
+}
+.content p{
+    letter-spacing: 3px;
+    width: 350px;
+    padding: 20px 0;
+}
+.film-container {
+    margin-top: 100px;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    
+}
+
+.film-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+        display: block;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+    }
+
+    /* Adjust header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    /* Adjust content */
+    .content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 50px;
+    }
+
+    .content p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Make video responsive */
+    .film-container {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        margin-top: 20px;
+    }
+
+    .film-container iframe {
+        width: 100%;
+        height: auto;
+    }
+}
